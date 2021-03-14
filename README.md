@@ -37,4 +37,9 @@ To keep everything working, do not remove `<!-- ... -->` sections.
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
+## Useful Resources
+
+https://intellij-support.jetbrains.com/hc/en-us/community/posts/206756295-TypedActionHandler-with-default-typing-behavior
+https://github.com/minman/browse-word-at-caret/blob/master/src/browsewordatcaret/BWACUtils.java
+
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
