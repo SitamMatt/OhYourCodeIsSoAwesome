@@ -10,7 +10,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.sitammatt.ohyourcodeissoawesome.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.sitammatt.ohyourcodeissoawesome.services.MyProjectService"/>
-        <editorTypedHandler implementationClass="com.github.sitammatt.ohyourcodeissoawesome.handlers.MyTypedHandler"/>
+<!--        <editorTypedHandler implementationClass="com.github.sitammatt.ohyourcodeissoawesome.handlers.MyTypedHandler"/>-->
+        <typedHandler implementation="com.github.sitammatt.ohyourcodeissoawesome.handlers.MyTypedHandlerDelegate"/>
     </extensions>
 
     <applicationListeners>
