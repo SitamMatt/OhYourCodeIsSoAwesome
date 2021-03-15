@@ -6,9 +6,7 @@ import com.intellij.notification.NotificationGroup
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.project.Project
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.concurrent.schedule
-import kotlin.random.Random.Default.nextInt
 
 class Notifier {
     private val nGroup: NotificationGroup = NotificationGroup("Custom Group", NotificationDisplayType.BALLOON, false)
@@ -18,8 +16,7 @@ class Notifier {
     fun makeNotification(positive: Boolean, project: Project) {
         val notification: Notification = if (positive) {
             nGroup.createNotification(pCommunicates[Random().nextInt(pCommunicates.size)], NotificationType.INFORMATION)
-        }
-        else {
+        } else {
             nGroup.createNotification(nCommunicates[Random().nextInt(nCommunicates.size)], NotificationType.INFORMATION)
         }
         notification.notify(project)
