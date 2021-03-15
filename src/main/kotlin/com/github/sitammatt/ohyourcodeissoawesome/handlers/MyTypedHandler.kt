@@ -17,18 +17,8 @@ class MyTypedHandler : TypedActionHandler {
         val document = editor.document
         val project = editor.project
 //        WriteCommandAction.runWriteCommandAction(project) { document.insertString(0, "editor_basics\\n") }
-        WriteCommandAction.runWriteCommandAction(project) { document.insertString(editor.caretModel.offset, charTyped.toString()) }
-        editor.caretModel.moveToOffset(editor.caretModel.offset + 1)
-        // todo send sexy notification
-
-        val nGroup: NotificationGroup = NotificationGroup("Custom Group", NotificationDisplayType.BALLOON, false)
-
-        val notification = nGroup.createNotification("Dobrze, tak trzymaj!", NotificationType.INFORMATION)
-        notification.notify(project)
-        val timer = Timer()
-        timer.schedule(500){
-            notification.expire()
-        }
+//        WriteCommandAction.runWriteCommandAction(project) { document.insertString(editor.caretModel.offset, charTyped.toString()) }
+//        editor.caretModel.moveToOffset(editor.caretModel.offset + 1)
     }
 
 }
