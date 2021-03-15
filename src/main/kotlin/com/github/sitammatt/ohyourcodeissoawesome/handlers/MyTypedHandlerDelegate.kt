@@ -10,13 +10,13 @@ import com.intellij.psi.PsiFile
 class MyTypedHandlerDelegate : TypedHandlerDelegate() {
     private val notifier = Notifier()
     private val badWords = arrayListOf("pupa", "akwarelista")
-    private val goodWords = arrayListOf("pudzian", "xD")
+    private val goodWords = arrayListOf("pudzian", "xd")
 
     override fun charTyped(c: Char, project: Project, editor: Editor, file: PsiFile): Result {
         val word = extractWordFrom(editor.document.text, editor.caretModel.currentCaret.offset);
 
-        if(goodWords.contains(word)) notifier.makeNotification(true, project)
-        if(badWords.contains(word)) notifier.makeNotification(false, project)
+        if(goodWords.contains(word?.toLowerCase())) notifier.makeNotification(true, project)
+        if(badWords.contains(word?.toLowerCase())) notifier.makeNotification(false, project)
         return Result.CONTINUE
     }
 }
