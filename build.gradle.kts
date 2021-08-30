@@ -29,7 +29,7 @@ repositories {
     jcenter()
 }
 dependencies {
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.15.0")
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.18.1")
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.31")
 }
 
